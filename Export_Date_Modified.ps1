@@ -6,7 +6,8 @@
 
     Summary:
     This script exports the "LastWriteTime" for all files in a directory and
-    exports the information to a CSV.
+    exports the information to a CSV. This script is based used in a live
+    console session.
 #>
 
 Param(
