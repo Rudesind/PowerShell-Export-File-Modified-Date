@@ -5,7 +5,7 @@
     Version: 1.0
 
     Summary:
-    This script exports the "Date modified" for all files in a directory and
+    This script exports the "LastWriteTime" for all files in a directory and
     exports the information to a CSV.
 #>
 
