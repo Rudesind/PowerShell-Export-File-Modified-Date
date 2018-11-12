@@ -51,7 +51,7 @@ try {
 
     Get-ChildItem -Path $Folder -Recurse -File | Select-Object Name, FullName, LastWriteTime | Export-CSV $CSVExport -NoTypeInformation
     
-    Write-Host "Exported Completed"
+    Write-Host "Export Completed"
 
 } catch {
     $errorMsg = "Error, could not export directory contents to CSV: " + $Error[0]
