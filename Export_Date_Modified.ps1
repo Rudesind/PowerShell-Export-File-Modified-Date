@@ -17,3 +17,20 @@ Param(
     [string] $Folder
 
 )
+
+# Error Codes
+#
+
+# Initialize
+#
+try {
+
+    # Friendly error message
+    #
+    [string] $errorMsg = [string]::Empty
+
+}
+catch {
+    throw "Critical Error: Could not initialize the function"
+    return -1
+}
