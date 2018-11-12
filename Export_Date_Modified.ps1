@@ -47,8 +47,12 @@ try {
 
     # Export all files in $Folder to CSV
     #
+    Write-Host "Begining export of $Folder contents to CSV..."
+
     Get-ChildItem -Path $Folder -Recurse -File | Select-Object Name, FullName, LastWriteTime | Export-CSV $CSVExport -NoTypeInformation
     
+    Write-Host "Exported Completed"
+
 } catch {
     $errorMsg = "Error, could not export directory contents to CSV: " + $Error[0]
     Write-Host $errorMsg
