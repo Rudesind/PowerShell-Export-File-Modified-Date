@@ -12,8 +12,8 @@
 Param(
 
     [ValidateNotNullOrEmpty()]
-    [ValidateScript( {(Test-Path $_)})]
-    [Parameter(ValueFromPipeline = $True, Mandatory = $True)]
+    [ValidateScript({(Test-Path $_)})]
+    [Parameter(ValueFromPipeline=$True, Mandatory=$True)]
     [string] $Folder,
 
     [ValidateNotNullOrEmpty()]
