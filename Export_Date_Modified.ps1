@@ -16,6 +16,10 @@ Param(
     [Parameter(ValueFromPipeline = $True, Mandatory = $True)]
     [string] $Folder
 
+    [ValidateNotNullOrEmpty()]
+    [Parameter(Mandatory=$True)]
+    [string] $CSVExport
+
 )
 
 # Error Codes
