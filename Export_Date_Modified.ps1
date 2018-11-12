@@ -1,7 +1,7 @@
 <#
     Script : Export_Date_Modified.ps1
     Updated: 11/12/2018
-    Author : Zach Nybo <zach.nybo@gmail.com>
+    Author : Rudesind <rudesind76@gmail.com>
     Version: 1.0
 
     Summary:
