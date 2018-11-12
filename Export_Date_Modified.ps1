@@ -24,6 +24,7 @@ Param(
 
 # Error Codes
 #
+New-Variable EXPORT_FAILED -option Constant -value 4000
 
 # Initialize
 #
@@ -37,4 +38,19 @@ try {
 catch {
     throw "Critical Error: Could not initialize the function"
     return -1
+}
+
+# Export to CSV
+#
+try {
+
+    # Export all files in $Folder to CSV
+    #
+    Get-ChildItem -Path $Folder -Recurse -File | Select-Object Name, FullName, LastWriteTime | Export-CSV $CSVExport -NoTypeInformation
+    
+} catch {
+    $errorMsg = "Error, could not export directory contents to CSV: " + $Error[0]
+    Write-Host $errorMsg
+    Write-Host "Exiting with error code: $EXPORT_FAILED"
+    exit $EXPORT_FAILED
 }
