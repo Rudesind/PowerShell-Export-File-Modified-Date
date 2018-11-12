@@ -9,3 +9,11 @@
     exports the information to a CSV.
 #>
 
+Param(
+
+    [ValidateNotNullOrEmpty()]
+    [ValidateScript( {(Test-Path $_)})]
+    [Parameter(ValueFromPipeline = $True, Mandatory = $True)]
+    [string] $Folder
+
+)
